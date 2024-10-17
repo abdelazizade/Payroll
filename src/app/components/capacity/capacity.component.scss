@@ -1,0 +1,19 @@
+div {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  background-image: linear-gradient(
+    135deg,
+    #14add6 0%,
+    #384295 100%
+  ) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 10px;
+}

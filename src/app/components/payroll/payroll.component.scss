@@ -1,0 +1,164 @@
+.container {
+  margin: 16px;
+}
+
+.header {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 20px;
+  height: 119px;
+  flex-wrap: wrap;
+  margin: 0 10px;
+}
+
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+  width: unset;
+}
+
+.header h3 {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.header p {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.editPayroll {
+  margin-right: 60px;
+  background: linear-gradient(135deg, #14add6 0%, #384295 100%);
+  padding: 10px;
+  width: 200px;
+  height: 46px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.payslip-content {
+  display: flex;
+  width: 924px;
+  // flex-wrap: wrap;
+}
+
+.payslip-card {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 20px;
+  margin: 20px 10px;
+}
+
+.payslip-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #000;
+  margin: 10px 0;
+}
+
+.payslip-sub-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 32px !important;
+}
+
+.salaryCard,
+.deduction {
+  width: 457px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.gap {
+  margin: 1px;
+  border: 1px solid #f6f6f6;
+  font-family: "Nunito", sans-serif;
+}
+
+mat-cell {
+  border: 1px solid #f6f6f6 !important;
+}
+
+.high-light {
+  border: 1px solid #15a9d3 !important;
+  // background-color: #14add6;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.high-light-salay {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.head {
+  background-color: #172437 !important;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.amuont {
+  max-width: 100px;
+}
+
+.net-salary p {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .payslip-content {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  mat-table {
+    margin-bottom: 14px;
+  }
+
+  .salaryCard,
+  .deduction {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .editPayroll {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .payslip-content {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .salaryCard,
+  .deduction {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+  .payslip-content {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .salaryCard,
+  .deduction {
+    width: 100%;
+    margin-right: 0;
+  }
+}

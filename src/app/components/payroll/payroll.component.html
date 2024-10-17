@@ -1,0 +1,108 @@
+<app-header></app-header>
+
+<mat-toolbar class="header">
+  <div class="user-name">
+    <h3>Abdelaziz Adel</h3>
+    <p>Managing Director | MD/CEO</p>
+  </div>
+  <div>
+    <button class="editPayroll">Edit Payslip</button>
+  </div>
+</mat-toolbar>
+
+<mat-card class="payslip-card">
+  <mat-card-title class="payslip-title">Salary Payslip</mat-card-title>
+  <mat-card-subtitle class="payslip-sub-title"
+    >Month: January &nbsp;&nbsp;&nbsp;&nbsp; Year: 2023</mat-card-subtitle
+  >
+
+  <div class="payslip-content">
+    <div class="salaryCard">
+      <mat-table
+        #table
+        [dataSource]="salaryData"
+        matSort
+        class="mat-elevation-z8 table"
+      >
+        <ng-container matColumnDef="salaryStructure">
+          <mat-header-cell
+            mat-sort-header
+            *matHeaderCellDef
+            class="salary gap head"
+            >{{ "salary Structure" | translate }}</mat-header-cell
+          >
+          <mat-cell
+            *matCellDef="let element"
+            [ngClass]="{ 'high-light-salay': element.salary == 'Gross Salary' }"
+            class="salary gap"
+          >
+            <p>{{ element.salary }}</p>
+          </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="amount">
+          <mat-header-cell
+            mat-sort-header
+            *matHeaderCellDef
+            class="deduction gap head amuont"
+            >{{ "amount" | translate }}</mat-header-cell
+          >
+          <mat-cell
+            *matCellDef="let element"
+            [ngClass]="{ 'high-light-salay': element.salary == 'Gross Salary' }"
+            class="deduction gap amuont"
+          >
+            <p>{{ element.amount }}</p>
+          </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let item; columns: displayedColumns"> </mat-row>
+      </mat-table>
+    </div>
+
+    <div class="deduction">
+      <mat-table
+        #table
+        [dataSource]="deductionData"
+        matSort
+        class="mat-elevation-z8"
+      >
+        <ng-container matColumnDef="deductions">
+          <mat-header-cell mat-sort-header *matHeaderCellDef class="gap head">{{
+            "deductions" | translate
+          }}</mat-header-cell>
+          <mat-cell
+            *matCellDef="let element"
+            [ngClass]="{ 'high-light': element.deductions == 'Net Salary' }"
+            class="gap"
+          >
+            <p>{{ element.deductions }}</p>
+          </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="deductionAmount">
+          <mat-header-cell
+            mat-sort-header
+            *matHeaderCellDef
+            class="gap head amuont"
+            >{{ "Amount" | translate }}</mat-header-cell
+          >
+          <mat-cell
+            *matCellDef="let element"
+            [ngClass]="{ 'high-light': element.deductions == 'Net Salary' }"
+            class="gap amuont"
+          >
+            <p>{{ element.deductionAmount }}</p>
+          </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="deductionColumns"></mat-header-row>
+        <mat-row *matRowDef="let item; columns: deductionColumns"> </mat-row>
+      </mat-table>
+      <div class="net-salary">
+        <p>Net Salary in Words: Eight Hundred Thousand Naira Only</p>
+      </div>
+    </div>
+  </div>
+</mat-card>

@@ -1,0 +1,143 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container router-outlet {
+  flex-grow: 1;
+}
+
+.sidenav-container {
+  height: 100vh;
+}
+
+.sidenav {
+  width: 250px;
+  background-color: #ffffff;
+}
+
+.sidenav-header {
+  text-align: center;
+  padding: 16px;
+}
+
+.blue-head {
+  margin: 12px 0 0;
+  font-size: 13px;
+  font-weight: 700;
+  background-image: linear-gradient(
+    135deg,
+    #14add6 0%,
+    #384295 100%
+  ) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.black-head {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+mat-list-item {
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+mat-list-item:hover {
+  background-color: #f8f9fd;
+}
+
+.mat-drawer-side {
+  border: unset;
+}
+
+.active {
+  position: relative;
+  background-color: #3664af !important;
+
+  background-image: linear-gradient(
+    135deg,
+    #14add6 0%,
+    #384295 100%
+  ) !important;
+
+  background-clip: text !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 5px;
+  background-color: #5584ce;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+mat-icon {
+  margin-right: 16px;
+  margin-bottom: -7px;
+  color: #000000;
+}
+
+.active-menu-item mat-icon {
+  color: #f2f7ff;
+}
+
+span {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.active span {
+  background-image: linear-gradient(
+    135deg,
+    #14add6 0%,
+    #384295 100%
+  ) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo {
+  position: relative;
+  width: 35.5px;
+  height: 35.5px;
+  margin: 0 auto;
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  width: 20.5px;
+  height: 40.5px;
+  background-color: #5584ce;
+  left: -5px;
+  transform: rotate(20deg);
+  border-radius: 32px 0px 0px 32px;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  width: 20.5px;
+  height: 40.5px;
+  right: -5px;
+  background-color: #fa4a4a;
+  transform: rotate(20deg);
+  border-radius: 0 32px 32px 0;
+}

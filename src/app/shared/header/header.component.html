@@ -1,0 +1,32 @@
+<mat-toolbar class="header">
+  <div class="Hright">
+    <div class="payrollSection">
+      <mat-icon class="payroll-icon">monetization_on</mat-icon>
+      <h2>{{ "PAYROLL.TITLE" | translate }}</h2>
+    </div>
+    <p class="descriptoin">{{ "PAYROLL.DESCRIPTION" | translate }}</p>
+  </div>
+
+  <div class="profileSection">
+    <mat-icon class="notification-icon">notifications</mat-icon>
+    <div class="user-profile">
+      <img
+        class="profile-img"
+        src="../../../assets/img/image.png"
+        alt="User Profile"
+      />
+      <div class="user-info">
+        <p class="user-name">Otor John</p>
+        <p class="user-role">HR Officer</p>
+      </div>
+      <!-- <mat-icon>keyboard_arrow_down</mat-icon> -->
+      <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+    </div>
+  </div>
+</mat-toolbar>
+
+<div class="back-btn-container">
+  <button mat-button class="back-btn">
+    <span class="material-symbols-outlined"> arrow_back_ios </span> Back
+  </button>
+</div>

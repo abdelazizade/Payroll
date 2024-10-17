@@ -1,0 +1,120 @@
+.header {
+  background-color: #f8f9fd;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  position: sticky; /* or fixed */
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 15px;
+}
+
+.payrollSection {
+  display: flex;
+  // align-items: center;
+}
+
+.payroll-icon {
+  font-size: 25px;
+  background-image: linear-gradient(
+    135deg,
+    #14add6 0%,
+    #384295 100%
+  ) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 10px;
+}
+
+::ng-deep .mat-toolbar h2 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #000000;
+  font-family: "Nunito", sans-serif;
+}
+
+.payroll-text p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: #262626;
+}
+
+.profileSection {
+  display: flex;
+  align-items: center;
+}
+
+.notification-icon {
+  font-size: 24px;
+  color: #121212;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-info {
+  margin-right: 10px;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 400;
+  color: #121212;
+}
+
+.user-role {
+  font-size: 12px;
+  font-weight: 400;
+  color: #515151;
+}
+
+mat-icon {
+  vertical-align: middle;
+}
+
+.back-btn-container {
+  height: 50px;
+  text-align: center;
+  background-color: #f8f9fd;
+  margin: 20px 10px;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  background-image: linear-gradient(
+    135deg,
+    #14add6 0%,
+    #384295 100%
+  ) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .descriptoin {
+    display: none;
+  }
+}
